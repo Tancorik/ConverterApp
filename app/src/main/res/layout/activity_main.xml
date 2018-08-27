@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:appContext=".presentation.ui.MainActivity"
+    android:layout_margin="8dp">
+
+    <TextView
+        android:id="@+id/title_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textAlignment="center"
+        android:textSize="22sp"
+        android:text="@string/title_text_view"/>
+
+    <TextView
+        android:id="@+id/date_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/title_text_view"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="20sp"
+        android:text="@string/before_date_text"/>
+
+    <TextView
+        android:id="@+id/start_value_text_vew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/date_text_view"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="@string/start_valute_text"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:id="@+id/start_valute_edit_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginVertical="8dp"
+        android:gravity="start"
+        android:hint="Введите сумму"
+        android:inputType="number|numberDecimal"
+        android:maxLength="9"
+        android:textAlignment="viewStart"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/char_code_start_valute"
+        app:layout_constraintTop_toBottomOf="@id/start_value_text_vew" />
+
+    <TextView
+        android:id="@+id/char_code_start_valute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/start_valute_edit_text"
+        app:layout_constraintBottom_toBottomOf="@id/start_valute_edit_text"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="18sp"
+        android:text="@string/char_code_stab"/>
+
+    <Spinner
+        android:id="@+id/start_valute_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/start_valute_edit_text"
+        android:layout_marginLeft="32dp"/>
+
+    <TextView
+        android:id="@+id/finish_value_text_vew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/start_valute_spinner"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="@string/finish_value_text"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:id="@+id/finish_valute_edit_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginVertical="8dp"
+        android:gravity="start"
+        android:focusable="false"
+        android:hint="Тут будет результат!"
+        android:inputType="numberSigned"
+        android:textAlignment="viewStart"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/char_code_finish_valute"
+        app:layout_constraintTop_toBottomOf="@id/finish_value_text_vew"
+        android:layout_marginStart="32dp" />
+
+    <TextView
+        android:id="@+id/char_code_finish_valute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/finish_valute_edit_text"
+        app:layout_constraintBottom_toBottomOf="@id/finish_valute_edit_text"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="18sp"
+        android:text="@string/char_code_stab"/>
+
+    <Spinner
+        android:id="@+id/finish_valute_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/finish_valute_edit_text"
+        android:layout_marginLeft="32dp"/>
+
+</android.support.constraint.ConstraintLayout>
